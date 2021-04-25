@@ -86,7 +86,12 @@ p {
 
 .white-section {
   padding: 5% 0;
+  margin: 2% 0;
   background-color: F2F2F2;
+  border: none;
+  border-radius: 25px;
+  color: #000000;
+  text-align: center;
 }
 
 .form-bg {
