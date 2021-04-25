@@ -11,7 +11,7 @@
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/index_styles.css" />
   <!-- Bootstrap Scripts -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -50,22 +50,31 @@
       <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8">
           <p id="warning">Please enter a title</p>
-          <form action="#" method="get" id="searchForm" class="input-group">
-
-            <div class="input-group-btn search-panel">
-              <select name="search_param" id="search_param" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                <option value="all">All</option>
-                <option value="history">History</option>
-                <option value="science">Science</option>
-                <option value="math">Math</option>
-              </select>
+          <form action="#" method="get" id="searchForm" class="input-group card card-sm">
+            <div class="card-body row no-gutters align-items-center">
+              <div class="col-auto">
+                <div class="input-group-btn search-panel">
+                  <select name="search_param" id="search_param" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <option value="all">All</option>
+                    <option value="history">History</option>
+                    <option value="chemistry">Chemistry</option>
+                    <option value="math">Math</option>
+                    <option value="biology">Biology</option>
+                    <option value="cs">CS</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <input type="text" class="form-control form-control-lg form-control-borderless" name="x" placeholder="Search a concept">
+              </div>
+              <div class="col-auto">
+                <span class="input-group-btn">
+                  <button class="btn btn-lg btn-success" type="submit">
+                    <span class="glyphicon glyphicon-search">Search</span>
+                  </button>
+                </span>
+              </div>
             </div>
-            <input type="text" class="form-control" name="x" placeholder="Search concept">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="submit">
-                <span class="glyphicon glyphicon-search">Search</span>
-              </button>
-            </span>
           </form><!-- end form -->
         </div>
       </div>
@@ -74,14 +83,13 @@
   </div>
 
   <!-- Topics Images -->
-  <div class="col-lg-8">
+  <div class="col-lg-8-offset-2">
     <div id="titles" class="row">
       <div class="col-md-4 mb-5">
         <div class="card h-100" style="max-width: 24rem;">
           <img class="card-img-top" src="memes/louisiana-purchase.jpg" alt="">
           <div class="card-body">
-            <h4 class="card-title">19th Century</h4>
-            <p class="card-text">2012 | 1h 40m | Family/Adventure </p>
+            <h4 class="card-title">History</h4>
           </div>
         </div>
       </div>
@@ -89,8 +97,7 @@
         <div class="card h-100" style="max-width: 24rem;">
           <img class="card-img-top" src="memes/sodium.jpg" alt="">
           <div class="card-body">
-            <h4 class="card-title">Wreck It Ralph</h4>
-            <p class="card-text">2012 | 1h 48m | Family/Comedy </p>
+            <h4 class="card-title">Chemistry</h4>
           </div>
         </div>
       </div>
@@ -98,8 +105,31 @@
         <div class="card h-100" style="max-width: 24rem;">
           <img class="card-img-top img" src="memes/numbers.jpg" alt="">
           <div class="card-body">
-            <h4 class="card-title"><a href="title.html">Soul</a></h4>
-            <p class="card-text">2020 | 1h 47m | Drama/Animation </p>
+            <h4 class="card-title"><a href="title.html">Mathematics</a></h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100" style="max-width: 24rem;">
+          <img class="card-img-top img" src="memes/biology.jpg" alt="">
+          <div class="card-body">
+            <h4 class="card-title"><a href="title.html">Biology</a></h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100" style="max-width: 24rem;">
+          <img class="card-img-top img" src="memes/cs.jpg" alt="">
+          <div class="card-body">
+            <h4 class="card-title"><a href="title.html">Computer Science</a></h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100" style="max-width: 24rem;">
+          <img class="card-img-top img" src="memes/physics.jpg" alt="">
+          <div class="card-body">
+            <h4 class="card-title"><a href="title.html">Physics</a></h4>
           </div>
         </div>
       </div>
