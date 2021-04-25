@@ -166,6 +166,12 @@ p {
 
 
 /* Images */
+img {
+    float: left;
+    width:  100px;
+    height: 300px;
+    object-fit: cover;
+}
 .img-fluid {
   max-width: 60%;
   height: auto;
@@ -239,10 +245,10 @@ p {
 }
 
 #warning {
-  color: red; 
+  color: red;
   font-style: italic;
   margin-top: 0;
-  display: none; 
+  display: none;
 }
 
 @keyframes shake {
@@ -268,7 +274,7 @@ p {
 }
 
 #triggers button{
-  margin: 0px 5px 5px 5px; 
+  margin: 0px 5px 5px 5px;
 }
 
 .title-name {
