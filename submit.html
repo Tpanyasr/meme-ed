@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles.css" />
+
+<body style="background-color:white;">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Create Your Own Meme | Home</title>
+  </head>
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Meme Education</a>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <a class="navbar-brand" href="index.html"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="submit.html">Create</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </nav>
+  <link rel="stylesheet" href="css/style.css">
+  <title>MemeEd | Create</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+  </head>
+
+  <body>
+    <div class="background-navy">
+      <header class="container-fluid">
+        <div class="container mx-auto text-center mb-5 title">
+          <h2 class="text-info">Create Your Own Meme</h2>
+        </div>
+        <div class="steps">
+          <p></p>
+        </div>
+      </header>
+      <section class="container">
+        <form id="meme-form">
+          <!-- Image section of form -->
+          <div class="group-form row mb-5">
+            <label for="link-to-pic" class="col-md-2 col-form-label">Upload Image Here:</label>
+            <div class="col-md-10 ">
+              <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none; border: none;"></p>
+              <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+              <p><img id="output" class="form-control-borderless" width="200" /></p>
+              <script>
+                var loadFile = function(event) {
+                  var image = document.getElementById('output');
+                  image.src = URL.createObjectURL(event.target.files[0]);
+                };
+              </script>
+            </div>
+          </div>
+          <!-- text-top section of form -->
+          <div class="group-form row mb-5">
+            <label for="text-on-top" class="col-md-2 col-form-label">Text on top:</label>
+            <div class="col-md-10">
+              <input type="text" class="form-control" id="text-top" placeholder="Your Top Text Goes Here (Optional)">
+            </div>
+          </div>
+          <!-- text-bottom section of form -->
+          <div class="group-form row mb-5">
+            <label for="text-on-bottom" class="col-md-2 col-form-label">Text on Bottom:</label>
+            <div class="col-md-10">
+              <input type="text" class="form-control" id="text-bottom" placeholder="Your Bottom Text Goes Here (Optional)">
+            </div>
+          </div>
+          <div class="group-form row mb-5">
+            <label class="col-md-2 col-form-label"></label>
+            <div class="col-md-2">
+              <input type="submit" class="btn btn-success" value="Generate!" onclick="showImage(this):" />
+              <script>
+                var loadFile = function(event) {
+                  var image = document.getElementById('output');
+                  image.src = URL.createObjectURL(event.target.files[0]);
+                };
+              </script>
+            </div>
+          </div>
+        </div>
+            <!-- Submission
+  <header>
+  <h2 ="text-align:center">SUBMISSION</h2>
+  </header>
+<body>
+  <h3 style="text-align:center">Create your own meme</h3>
+  <script>
+  var loadFile = function(event) {
+  var image = document.getElementById('output');
+  image.src = URL.createObjectURL(event.target.files[0]);
+  };
+  </script>
+  <div class="mm-boxes"></div>
+  <div class="mm-transparency-color-wrap clearfix">
+  <div class="color-picker mm-transparency-color-picker"></div>
+  <div class="mm-transparency-color-label">← Transparency color. Used as background since this image contains transparency. Click to change.</div>
+  </div>
+-->
+            <!--image on text -->
+            <!--
+  <style>
+        .upload {
+            margin: 3%;
+            position: relative;
+        }
+        .first-txt {
+            position: absolute;
+            top: 17px;
+            left: 50px;
+        }
+        .second-txt {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload">
+        <img src="uploadedimg">
+        <h3 class="first-txt">
+        </h3>
+    </div>
+  <form action="/action_page.php">
+    <label>Select image:</label><br>
+    <input type="file" id="img" name="uploadedimg" accept="image/*">
+    <div class="form">
+  		<label>Caption:</label><br>
+  		<input type="text" name="Caption">
+  		<label><br>Explanation:</label>
+  		<input type="text" name="Brief Explanation">
+      <div class="col-2">
+        <button type="button" class="btn btn-md btn-success">Submit</button>
+      </div>
+  	</div>
+  </form>
+-->
+            <!--Submitting own meme
+<h3 style="text-align:center">Submit a meme</h3>
+<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+<p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+<p><img id="output" width="200" /></p>
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+  <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none";></p>
+  <p><label for="file" style= "cursor: pointer;">Upload Image</label></p>
+  <p><br><img id="output" width="300" ALIGN ="left"/></br></p>
+  <div class="form">
+		<label>Caption:</label><br>
+		<input type="text" name="Caption">
+		<label><br>Explanation:</label>
+		<input type="text" name="Brief Explanation">
+    <div class="col-2">
+      <button type="button" class="btn btn-md btn-success">Submit</button>
+    </div>
+	</div>
+-->
+            <!-- caption/explanation format -->
+            <!-- Footer
+    <footer class="white-section bg-light" id="footer">
+      <div class="container-footer">
+        <p class="text-muted">
+          © Copyright 2021 Meme Education • Made in San Luis Obispo.
+        </p>
+      </div>
+    </footer>
+    <script src="js/index.js" charset="utf-8"></script>
+-->
+<!-- Footer -->
+<footer class="white-section bg-light" id="footer">
+  <div class="container-footer">
+    <p class="text-muted">
+        © Copyright 2021 Meme-Ed • Made with love by four professional meme experts.
+    </p>
+  </div>
+</footer>
+            <script src="js/index.js" charset="utf-8"></script>
+  </body>
+
+</html>
